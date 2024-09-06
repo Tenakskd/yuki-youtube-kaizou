@@ -14,10 +14,6 @@
   document.cookie = "k=" + hash + "; path=/";
 }, 1000);</script>
 <script>
-  function addDarkmodeWidget() {
-    new Darkmode().showWidget();
-  }
-  window.addEventListener('load', addDarkmodeWidget);
   const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4')
     .then(FingerprintJS => FingerprintJS.load())
   fpPromise
