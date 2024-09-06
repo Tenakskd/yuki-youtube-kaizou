@@ -2,7 +2,23 @@
 <html>
 <head>
     <title>掲示板</title>
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mochidukiyukimi/YukBBS-Verify@main/wasm_exec.js"></script>
+  <script>async function loadWasm() {
+            const go = new Go();
+            const wasm = await WebAssembly.instantiateStreaming(fetch("https://cdn.jsdelivr.net/gh/mochidukiyukimi/YukBBS-Verify@main/yukiverify.wasm"), go.importObject);
+            go.run(wasm.instance);
+        }
+    loadWasm();
+    setInterval(() => {
+  const hash = getHashedUrl();
+  document.cookie = "k=" + hash + "; path=/";
+}, 1000);</script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode().showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
   const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4')
     .then(FingerprintJS => FingerprintJS.load())
   fpPromise
