@@ -30,11 +30,11 @@
         <div class="pure-u-1 pure-u-md-20-24" id="contents">
             <div class="pure-g navbar h-box">
                 <div class="pure-u-1 pure-u-md-12-24 searchbar">
-                    <a href="/">ホーム</a>&nbsp;&nbsp;
-                    <a href="/bbs">掲示板</a>&nbsp;&nbsp;
+                    <a href="/">HOMEPAGE</a>&nbsp;&nbsp;
+                    <a href="/bbs">BBS</a>&nbsp;&nbsp;
                     <a href="/about">about</a>&nbsp;&nbsp;
-                    <a href="/forms">リクエスト</a>&nbsp;&nbsp;
-                    <a href="/requestform">新機能の要望やバグ報告</a>
+                    <a href="/forms">request</a>&nbsp;&nbsp;
+                    <a href="/requestform">Requests for new features and bug reports</a>
                     <form class="pure-form" action="/search" method="get">
                         <fieldset>
                             <input type="search" id="searchbox" autocomplete="on" autocorrect="on" autocapitalize="none" spellcheck="false" name="q" placeholder="検索" title="検索">
@@ -56,7 +56,7 @@
                 <div id="descriptionWrapper">
                     <p><span style="white-space:pre-wrap">{{channelprofile | safe}}</span></p>
                 </div>
-                <a id="clickable-text">チャンネルIDをコピーする</a><br />
+                <a id="clickable-text">Copy channel id</a><br />
                         <div id="result-message"></div><br />
             </div>
             <div class="pure-g">
@@ -95,7 +95,7 @@
                 
                             <div class="thumbnail">
                                 <img loading="lazy" tabindex="-1" class="thumbnail" src="{% if proxy == "True" %}/thumbnail?v={{ result['thumbnail'] }}{% else %}https://img.youtube.com/vi/{{ result['thumbnail'] }}/0.jpg{% endif %}">
-                                <p class="length">{{result["count"]}}個の動画</p>
+                                <p class="length">{{result["count"]}}Videos</p>
                             </div>
                         
                         <p dir="auto">{{result["title"]}}</p>
@@ -141,28 +141,28 @@
     setInterval(displayTime, 1000);
 
         document.getElementById('clickable-text').addEventListener('click', function() {
-    // 現在のページのURLを取得
+    
     const url = window.location.href;
     const resultMessageElement = document.getElementById('result-message');
 
-    // URLからチャンネルIDを抽出
+  
     const cIdMatch = url.match(/\/channel\/([^&]+)/);
     if (cIdMatch) {
         const cId = cIdMatch[1];
 
-        // チャンネルIDをクリップボードにコピー
+       
         navigator.clipboard.writeText("/channel/"+cId)
         .then(() => {
-                resultMessageElement.textContent = 'チャンネルIDがクリップボードにコピーされました\nID:' + cId;
-                resultMessageElement.style.color = 'green'; // 成功した場合のメッセージを緑色に設定
+                resultMessageElement.textContent = 'The channel ID has been copied!\nID:' + cId;
+                resultMessageElement.style.color = 'green'; 
             })
             .catch(err => {
-                resultMessageElement.textContent = 'クリップボードへのコピーに失敗しました: ' + err;
-                resultMessageElement.style.color = 'red'; // 失敗した場合のメッセージを赤色に設定
+                resultMessageElement.textContent = 'Copy Failed.Please try again.: ' + err;
+                resultMessageElement.style.color = 'red'; 
             });
     } else {
-        resultMessageElement.textContent = 'ビデオIDがURLに見つかりませんでした。';
-        resultMessageElement.style.color = 'red'; // チャンネルIDが見つからなかった場合のメッセージを赤色に設定
+        resultMessageElement.textContent = 'The video ID could not be found in the URL.';
+        resultMessageElement.style.color = 'red'; 
     }
 });
     </script>
