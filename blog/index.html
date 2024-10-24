@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>login</title>
-    <link rel="stylesheet" href="./togglePassword.css">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <style>
+<!DOCTYPE html>&#10;<html lang="ja">&#10;<head>&#10;&#32;&#32;&#32;&#32;<meta charset="UTF-8">&#10;&#32;&#32;&#32;&#32;<title>&#108;&#111;&#103;&#105;&#110;</title>&#10;&#32;&#32;&#32;&#32;<link rel="stylesheet" href="./togglePassword.css">&#10;&#32;&#32;&#32;&#32;<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">&#10;&#32;&#32;&#32;&#32;<style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f7f9fc;
@@ -98,8 +91,7 @@
             transform: translateY(-50%);
             cursor: pointer;
         }
-    </style>
-    <script>
+    </style>&#10;&#32;&#32;&#32;&#32;<script>
         function showLoginDialog() {
             document.getElementById('loginDialog').style.display = 'block';
         }
@@ -162,22 +154,4 @@
                 toggleIcon.classList.add('fa-eye');
             }
         }
-    </script>
-</head>
-<body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <input type="button" onClick="showLoginDialog()" value="sogn in">
-        <div id="info"></div>
-    </div>
-    <div id="loginDialog">
-        <button class="close-btn" onClick="closeLoginDialog()">×</button>
-        <input type="text" id="wordInput" placeholder="ID" onkeypress="handleKeyPress(event, 'passwordInput')">
-        <div class="password-container">
-            <input type="password" id="passwordInput" placeholder="Password" onkeypress="handlePasswordKeyPress(event)">
-            <i id="togglePassword" class="fas fa-eye toggle-password" onClick="togglePasswordVisibility()"></i>
-        </div>
-        <input type="button" onClick="validateAndSubmit()" value="Send A Server">
-    </div>
-</body>
-</html>
+    </script>&#10;</head>&#10;<body>&#10;&#32;&#32;&#32;&#32;<div class="login-container">&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<h2>&#76;&#111;&#103;&#105;&#110;</h2>&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<input type="button" onClick="showLoginDialog()" value="sogn in">&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<div id="info"></div>&#10;&#32;&#32;&#32;&#32;</div>&#10;&#32;&#32;&#32;&#32;<div id="loginDialog">&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<button class="close-btn" onClick="closeLoginDialog()">&#215;</button>&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<input type="text" id="wordInput" placeholder="ID" onkeypress="handleKeyPress(event, 'passwordInput')">&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<div class="password-container">&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<input type="password" id="passwordInput" placeholder="Password" onkeypress="handlePasswordKeyPress(event)">&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<i id="togglePassword" class="fas fa-eye toggle-password" onClick="togglePasswordVisibility()"></i>&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</div>&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<input type="button" onClick="validateAndSubmit()" value="Send A Server">&#10;&#32;&#32;&#32;&#32;</div>&#10;</body>&#10;</html>&#10;
