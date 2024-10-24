@@ -9,6 +9,6 @@
 # デプロイ  
 
 Renderのアカウントを持っていればここからデプロイできます。  
-<a href="https://render.com/deploy?repo=https://github.com/beta9514/B95_EX">
+<a href="https://render.com/deploy?repo=https://github.com/Tenakskd/yuki-youtube-kaizou/">
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a>
