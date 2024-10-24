@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>ログイン</title>
+    <title>login</title>
     <link rel="stylesheet" href="./togglePassword.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <style>
@@ -114,7 +114,7 @@
             if (inputWord === specialWord) {
                 getlevel();
             } else {
-                document.getElementById('info').textContent = "入力が無効です。もう一度お試しください。";
+                document.getElementById('info').textContent = "Not Active . Try Again";
                 closeLoginDialog();
             }
         }
@@ -166,8 +166,8 @@
 </head>
 <body>
     <div class="login-container">
-        <h2>ログイン</h2>
-        <input type="button" onClick="showLoginDialog()" value="認証">
+        <h2>Login</h2>
+        <input type="button" onClick="showLoginDialog()" value="sogn in">
         <div id="info"></div>
     </div>
     <div id="loginDialog">
@@ -177,7 +177,7 @@
             <input type="password" id="passwordInput" placeholder="Password" onkeypress="handlePasswordKeyPress(event)">
             <i id="togglePassword" class="fas fa-eye toggle-password" onClick="togglePasswordVisibility()"></i>
         </div>
-        <input type="button" onClick="validateAndSubmit()" value="送信">
+        <input type="button" onClick="validateAndSubmit()" value="Send A Server">
     </div>
 </body>
 </html>
