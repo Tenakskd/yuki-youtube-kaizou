@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-    <title>Video</title>
+    <title>Sponser Video</title>
     <link rel="stylesheet" href="/css/pure-min.css">
     <link rel="stylesheet" href="/css/grids-responsive-min.css">
     <link rel="stylesheet" href="/css/ionicons.min.css">
@@ -27,15 +27,15 @@
         <div class="pure-u-1 pure-u-md-20-24" id="contents">
             <div class="pure-g navbar h-box">
                 <div class="pure-u-1 pure-u-md-12-24 searchbar">
-                    <a href="/">ホーム</a>&nbsp;&nbsp;
-                    <a href="/bbs">掲示板</a>&nbsp;&nbsp;
+                    <a href="/">HOME</a>&nbsp;&nbsp;
+                    <a href="/bbs">BBS</a>&nbsp;&nbsp;
                     <a href="/about">about</a>&nbsp;&nbsp;
-                    <a href="/forms">リクエスト</a>&nbsp;&nbsp
-                    <a href="/requestform">新機能の要望やバグ報告</a>
+                    <a href="/forms">REQUEST</a>&nbsp;&nbsp
+                    <a href="/requestform">Requests for new features and bug reports</a>
                     <form class="pure-form" action="/search" method="get">
                         <fieldset>
                             <input type="search" id="searchbox" autocomplete="on" autocorrect="on" autocapitalize="none"
-                                spellcheck="false" name="q" placeholder="検索" title="検索" value="">
+                                spellcheck="false" name="q" placeholder="SEARCH" title="SEARCH" value="">
                         </fieldset>
                     </form>
                 </div>
@@ -55,12 +55,12 @@
             </div><hr />
             <div class="pure-g">
                 <div class="pure-u-1 pure-u-lg-1-5">
-                    <a href="{{ videourls[0] }}" target="_blank">ダウンロード</a><br>
+                    <a href="{{ videourls[0] }}" target="_blank">DOWNLOAD VIDEO</a><br>
                     <a
-                        href="javascript:{navigator.share({title: '動画を共有',text: '{{videotitle}}',url: location.protocol+'//'+document.domain+'/watch?v={{ videoid }}'+'&t='+Math.floor(document.getElementById('player').currentTime),})}">現時点の動画を共有</a><br>
+                        href="javascript:{navigator.share({title: 'SHARE',text: '{{videotitle}}',url: location.protocol+'//'+document.domain+'/watch?v={{ videoid }}'+'&t='+Math.floor(document.getElementById('player').currentTime),})}">現時点の動画を共有</a><br>
                     <a
-                        href="javascript:{navigator.share({title: '動画を共有',text: '{{videotitle}}',url: location.href,})}">動画を共有</a><br>
-                        <a id="clickable-text">ビデオIDをコピーする</a><br />
+                        href="javascript:{navigator.share({title: 'SHARE',text: '{{videotitle}}',url: location.href,})}">動画を共有</a><br>
+                        <a id="clickable-text">COPY VIDEO ID</a><br />
                         <div id="result-message"></div><br />
                 </div>
                 <div class="pure-u-1 pure-u-lg-3-5">
@@ -116,7 +116,7 @@
             if (xhr.status != 500) {
                 document.getElementById('comments').innerHTML = xhr.responseText;
             }
-            else { document.getElementById('comments').innerHTML = "エラーが発生しました。再読み込みを試してください"; }
+            else { document.getElementById('comments').innerHTML = "PLEASE TRY AGAIN"; }
         };
         xhr.send();
         if (document.domain != "yukigennumber.ddo.jp") { document.getElementById("ads_box").innerHTML = ""; }
@@ -170,8 +170,8 @@
                 resultMessageElement.style.color = 'red'; // 失敗した場合のメッセージを赤色に設定
             });
     } else {
-        resultMessageElement.textContent = 'ビデオIDがURLに見つかりませんでした。';
-        resultMessageElement.style.color = 'red'; // ビデオIDが見つからなかった場合のメッセージを赤色に設定
+        resultMessageElement.textContent = 'VIDEO ID NOT FOUND';
+        resultMessageElement.style.color = 'red'; 
     }
 });
 function displayTime() {
